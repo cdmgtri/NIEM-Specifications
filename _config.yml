@@ -1,0 +1,24 @@
+
+# Site settings
+
+exclude:
+  - README.md
+  - Gemfile
+  - Gemfile.lock
+
+incremental: true
+
+kramdown:
+  input: GFM
+
+# livereload: true
+
+markdown: kramdown
+
+port: 4001
+
+repository: NIEM/NIEM-Specifications
+
+title: NIEM Specifications
+
+# verbose: true

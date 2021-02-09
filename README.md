@@ -3,7 +3,7 @@
 
 This is a landing page for information about the set of NIEM specifications, managed by the NIEM Technical Architecture Committee (NTAC).
 
-Please click [here](https://cdmgtri.github.io/NIEM-Specifications/) to view more information about each specification.
+Please click [here](https://niem.github.io/NIEM-Specifications/) to view more information about each specification.
 
 ## Index of specification repos
 
@@ -12,3 +12,4 @@ Please click [here](https://cdmgtri.github.io/NIEM-Specifications/) to view more
 - [NIEM JSON repo](https://github.com/NIEM/NIEM-JSON-Spec)
 - [Code Lists repo](https://github.com/NIEM/NIEM-Code-Lists-Spec)
 - [Conformance Specification repo](https://github.com/NIEM/NIEM-Conformance-Spec)
+- [Conformance Targets Attribute Specification (CTAS) repo](https://github.com/NIEM/NIEM-Conformance-Targets-Attribute-Spec)

@@ -1,0 +1,50 @@
+
+{% assign classID = include.classID %}
+
+{% assign class = site.data.classes | where: "id", classID | first %}
+{% assign specs = site.data.specifications | where: "classID", classID | sort: "version" | reverse %}
+
+
+{{ class.description }}
+
+{% if class.note %}
+> Note: {{ class.note }}
+{% endif %}
+
+<p>
+  Submit a <a href="{{class.repo}}/issues/new">new issue</a>,
+  view <a href="{{class.repo}}/issues">all issues</a>,
+  {% if class.issueTracker %} track <a href="{{class.issueTracker}}">issue status</a>, {% endif %}
+  or go to the <a href="{{class.repo}}">GitHub repo</a> for this specification.
+</p>
+
+<strong>Available versions</strong>
+
+<ul>
+  {% for spec in specs %}
+
+    {% assign status = "" %}
+    {% assign changes = "" %}
+    {% assign useWith = "" %}
+
+    {% if spec.status == "current" %}
+      {% assign status = " - <strong>current version</strong>" %}
+    {% elsif spec.status == "draft" %}
+      {% assign status = " - <strong>latest draft</strong>" %}
+    {% endif %}
+
+    {% if spec.changeHistory %}
+      {% assign changes = " See <a href='" | append: spec.changeHistory | append: "'>changes</a>." %}
+    {% endif %}
+
+    {% if spec.applicableReleases %}
+      {% assign useWith = "| use with " | append: spec.applicableReleases %}
+    {% endif %}
+
+    <li>
+      <strong><a href="{{spec.url}}">Version {{ spec.version }}</a> </strong>
+      <span style="font-weight: lighter;">[ published {{ spec.year }} {{ useWith }} ]{{ status }}.{{ changes }}</span>
+    </li>
+
+  {% endfor %}
+</ul>
