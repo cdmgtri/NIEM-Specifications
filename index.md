@@ -1,5 +1,4 @@
 ---
-  feedbackDate: DATE
 ---
 
 This is a landing page for information about the set of NIEM specifications, managed by the NIEM Technical Architecture Committee (NTAC).
@@ -7,11 +6,15 @@ This is a landing page for information about the set of NIEM specifications, man
 - TOC
 {:toc}
 
+{% assign announcement = site.data.announcement.message %}
+
+{% if announcement %}
+
 ## Announcements
 
 <div markdown="1" class="note">
 
-The following NIEM specifications have drafts ready for review, with feedback requested by {{ page.feedbackDate }}.
+{{ announcement }}
 
 {% assign drafts = site.data.specifications | where: "status", "draft" %}
 
@@ -26,9 +29,13 @@ The following NIEM specifications have drafts ready for review, with feedback re
 
 </div>
 
+{% endif %}
+
 ## NIEM Naming and Design Rules (NDR) Specification
 
 {% include section.html classID="NDR" %}
+
+<!-- Include additional NDR resources here -->
 
 <details>
 <summary markdown="span">Expand for Schematron rule bundles and more NDR resources...</summary>
