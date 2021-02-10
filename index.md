@@ -40,6 +40,7 @@ This is a landing page for information about the set of NIEM specifications, man
 <details>
 <summary markdown="span">Expand for Schematron rule bundles and more NDR resources...</summary>
 
+<br/>
 <div markdown="1">
 
 > The [Conformance Testing Assistant (ConTesA)](https://tools.niem.gov/contesa/) is an online tool that offers NDR conformance validation testing for NIEM XML schemas.  Conformance validation can also be tested locally with the NDR Schematron rules provided here.  Download a zip file below and see the [instructions](https://niem.github.io/reference/specifications/ndr/oxygen-schematron/) on how to test NDR conformance using the Oxygen XML Editor.
